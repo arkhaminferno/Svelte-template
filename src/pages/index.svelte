@@ -1,1 +1,2 @@
-<h1>{process.env.HOST}</h1>
+
+<h1>Home page</h1>

@@ -17,6 +17,7 @@
     "css-minimizer-webpack-plugin": "^1.1.5",
     "dotenv-webpack": "^6.0.0",
     "mini-css-extract-plugin": "^0.6.0",
+    "node-sass": "^5.0.0",
     "postcss": "^8.1.9",
     "postcss-loader": "^4.1.0",
     "postcss-preset-env": "^6.7.0",
@@ -24,8 +25,8 @@
     "prettier-plugin-svelte": "^1.4.2",
     "serve": "^11.0.0",
     "style-loader": "^0.23.1",
-    "svelte": "^3.0.0",
-    "svelte-loader": "2.13.3",
+    "svelte": "3.31.0",
+    "svelte-loader": "2.13.6",
     "svelte-preprocess": "^4.6.1",
     "tailwindcss": "^2.0.1",
     "webpack": "^4.30.0",
@@ -36,9 +37,12 @@
     "clean:all": "npx shx rm -rf public/bundle.* && npx shx rm -rf node_modules",
     "clean": "npx shx rm -rf public/bundle.*",
     "build": "cross-env NODE_ENV=production routify -b  && webpack",
-    "dev": "webpack-dev-server --content-base public && routify ",
+    "dev": "concurrently \"webpack-dev-server --content-base public  \" \"routify \"",
     "test": "web-test-runner \"src/**/*.test.js\" --node-resolve --playwright --browsers chromium firefox webkit",
     "routify": "routify"
   },
-  "dependencies": {}
+  "dependencies": {
+    "concurrently": "^5.3.0",
+    "firebase": "^8.2.0"
+  }
 }

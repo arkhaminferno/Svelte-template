@@ -5,7 +5,7 @@ const sveltePreprocess = require('svelte-preprocess');
 const Dotenv = require('dotenv-webpack');
 const mode = process.env.NODE_ENV || 'development';
 const prod = mode === 'production';
-
+const { preprocess } = require('./svelte.config');
 const sveltePath = path.resolve('node_modules', 'svelte')
 
 module.exports = {
@@ -25,7 +25,11 @@ module.exports = {
 		chunkFilename: 'bundle.[id].js',
 		libraryTarget: 'umd',
 		umdNamedDefine: true,
+		publicPath: "/",
 	},
+	devServer: {
+		historyApiFallback: true,
+	  },
 	module: {
 		rules: [
 			// Rules are chained bottom to top. Babel rule must probably be one of
@@ -67,6 +71,7 @@ module.exports = {
 					options: {
 						emitCss: true,
 						hotReload: true,
+						preprocess,
 						preprocess: sveltePreprocess({
 							babel: {
 								presets: [

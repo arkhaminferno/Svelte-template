@@ -1,64 +1,35 @@
-# svelte app
+# README #
 
-This is a project template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/sveltejs/template-webpack.
+This README would normally document whatever steps are necessary to get your application up and running.
 
-To create a new project based on this template using [degit](https://github.com/Rich-Harris/degit):
+
+
+### How do I get set up? ###
+
+Clone and enter repository:
+
 
 ```bash
-npx degit sveltejs/template-webpack svelte-app
-cd svelte-app
+git clone git@gitlab.com:meld-gold/frontend/partner.git
+cd partner
 ```
-
-*Note that you will need to have [Node.js](https://nodejs.org) installed.*
-
-
-## Get started
 
 Install the dependencies...
 
 ```bash
-cd svelte-app
-npm install
+yarn 
 ```
 
-...then start webpack:
+to start the project (build first)
 
 ```bash
-npm run dev
+yarn run build
 ```
+and then
+
+```bash
+yarn run dev
+```
+
 
 Navigate to [localhost:8080](http://localhost:8080). You should see your app running. Edit a component file in `src`, save it, and the page should reload with your changes.
-
-
-## Deploying to the web
-
-### With [now](https://zeit.co/now)
-
-Install `now` if you haven't already:
-
-```bash
-npm install -g now
-```
-
-Then, from within your project folder:
-
-```bash
-now
-```
-
-As an alternative, use the [Now desktop client](https://zeit.co/download) and simply drag the unzipped project folder to the taskbar icon.
-
-### With [surge](https://surge.sh/)
-
-Install `surge` if you haven't already:
-
-```bash
-npm install -g surge
-```
-
-Then, from within your project folder:
-
-```bash
-npm run build
-surge public
-```

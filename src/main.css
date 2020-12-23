@@ -3,3 +3,24 @@
 @tailwind components;
 
 @tailwind utilities;
+
+body {
+  font-family: Manrope;
+}
+.silver-bg-grad {
+  background: radial-gradient(
+      106% 106% at 49.74% 38.74%,
+      rgba(153, 163, 177, 0.275) 0%,
+      rgba(36, 41, 48, 0.5) 100%
+    ),
+    radial-gradient(83% 83% at 26.74% 16.74%, #a4a7af 0%, #1d1f22 100%);
+}
+
+.gold-bg-grad {
+  background: radial-gradient(
+      106% 106% at 49.74% 38.74%,
+      rgba(255, 214, 0, 0.275) 0%,
+      rgba(238, 150, 19, 0.5) 100%
+    ),
+    radial-gradient(83% 83% at 26.74% 16.74%, #ffd600 0%, #ee7c13 100%);
+}
